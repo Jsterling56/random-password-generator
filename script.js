@@ -6,6 +6,11 @@
 
 function generatePassword(){
   var passwordLength = window.prompt('How many characters would you like your new password to be? (8-128 characters)');
+  if(passwordLength < 8 || passwordLength > 128){
+    window.alert('Too many characters/Not enough characters')
+    return 
+  }
+  
   console.log('passwordLength', passwordLength);
   
   var lowercaseConfirm = window.confirm('Would you like to include lowercase characters?');
